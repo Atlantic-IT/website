@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlantic Information Technology Consulting, Inc.</title>
+    <meta name="description" content="Calm, peer-level cybersecurity guidance for small-to-mid-sized businesses. Threat modeling, penetration testing, security awareness training, and incident response planning.">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0a1628;
+            color: #d0d8e8;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        a {
+            color: #5b9bd5;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(91, 155, 213, 0.15);
+            padding: 0 2rem;
+            z-index: 100;
+        }
+
+        nav .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        nav .brand {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+
+        nav .brand span {
+            color: #5b9bd5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: #8a9bb8;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            line-height: 1.25;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: #8a9bb8;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        .hero .location {
+            font-size: 0.95rem;
+            color: #5a6a84;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #5b9bd5;
+            margin: 0 auto;
+            opacity: 0.6;
+        }
+
+        /* Services */
+        .services {
+            background: #0d1b30;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-heading h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-heading p {
+            color: #6b7d9a;
+            font-size: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+        }
+
+        .service-card {
+            background: rgba(26, 42, 68, 0.6);
+            border: 1px solid rgba(91, 155, 213, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #8a9bb8;
+            line-height: 1.65;
+        }
+
+        /* About */
+        .about .about-content {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .about .about-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .about .credentials {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .about .credentials li {
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            color: #8a9bb8;
+            font-size: 0.95rem;
+        }
+
+        .about .credentials li::before {
+            content: "\2014";
+            position: absolute;
+            left: 0;
+            color: #5b9bd5;
+        }
+
+        /* Contact */
+        .contact {
+            background: #0d1b30;
+            text-align: center;
+        }
+
+        .contact .instagram-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            border: 1px solid rgba(91, 155, 213, 0.4);
+            border-radius: 6px;
+            color: #5b9bd5;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .contact .instagram-link:hover {
+            background: rgba(91, 155, 213, 0.1);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid rgba(91, 155, 213, 0.1);
+            color: #4a5a74;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.05rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1.25rem;
+            }
+
+            nav ul li a {
+                font-size: 0.8rem;
+            }
+
+            nav .brand {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .nav-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 0.75rem 0;
+                gap: 0.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero {
+                padding-top: 7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand"><span>AITC</span></div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Atlantic Information Technology Consulting</h1>
+            <p class="tagline">Calm, peer-level cybersecurity guidance for small-to-mid-sized businesses.</p>
+            <p class="location">East Islip, New York</p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Services</h2>
+                <p>Practical security work, clearly scoped and plainly explained.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Threat Modeling</h3>
+                    <p>A structured process for identifying the most likely attack scenarios your business faces. You receive prioritized risk areas and recommended mitigations you can actually act on.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Penetration Testing</h3>
+                    <p>Simulated attacks against your internet-facing systems and web applications to find vulnerabilities before real attackers do. Clear findings, clear remediation steps.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Security Awareness Training</h3>
+                    <p>Short, frequent modules with role-specific scenarios and simulated phishing. Designed to be educational, not punitive &mdash; your team learns without the scare tactics.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Incident Response Planning</h3>
+                    <p>Tailored runbooks, tabletop exercises, and escalation plans so your organization knows exactly what to do when &mdash; not if &mdash; an incident occurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-heading">
+                <h2>About</h2>
+            </div>
+            <div class="about-content">
+                <p>Atlantic Information Technology Consulting was founded in 2017 by Benjamin Sondgeroth to bring enterprise-grade security experience to small and mid-sized businesses &mdash; the organizations that need it most but are least likely to have it in-house.</p>
+                <p>Ben's background spans offensive security, risk management, and security leadership at scale:</p>
+                <ul class="credentials">
+                    <li>Led a 28-person Security Architecture team at Morgan Stanley</li>
+                    <li>Built and ran a global red team at CA Technologies; penetration tested 500+ systems</li>
+                    <li>Led tabletop exercises for 50+ senior leaders; contributed to $100M+ in revenue protection</li>
+                    <li>Conference speaker at West Point, Gridiron, SANS, and Accelerate</li>
+                    <li>Multiple first-place finishes in capture-the-flag competitions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Get in Touch</h2>
+                <p>Reach out to start a conversation about your security needs.</p>
+            </div>
+            <a href="https://www.instagram.com/atlanticit.inc" class="instagram-link" target="_blank" rel="noopener noreferrer">@atlanticit.inc on Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2017&ndash;2026 Atlantic Information Technology Consulting, Inc. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
