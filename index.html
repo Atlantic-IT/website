@@ -57,14 +57,23 @@
         }
 
         nav .brand {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #ffffff;
-            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
         }
 
-        nav .brand span {
-            color: #5b9bd5;
+        nav .brand img {
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        nav .brand-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.04em;
         }
 
         nav ul {
@@ -106,6 +115,15 @@
         .hero {
             padding: 10rem 2rem 6rem;
             text-align: center;
+        }
+
+        .hero .logo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 2.5rem;
+            filter: drop-shadow(0 4px 24px rgba(91, 155, 213, 0.2));
         }
 
         .hero h1 {
@@ -216,9 +234,16 @@
             text-align: center;
         }
 
-        .contact .instagram-link {
-            display: inline-block;
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 1.5rem;
+        }
+
+        .contact-buttons a {
+            display: inline-block;
             padding: 0.75rem 2rem;
             border: 1px solid rgba(91, 155, 213, 0.4);
             border-radius: 6px;
@@ -228,9 +253,14 @@
             transition: background 0.2s, color 0.2s;
         }
 
-        .contact .instagram-link:hover {
+        .contact-buttons a:hover {
             background: rgba(91, 155, 213, 0.1);
             text-decoration: none;
+        }
+
+        .contact-buttons .email-link {
+            background: rgba(91, 155, 213, 0.12);
+            border-color: rgba(91, 155, 213, 0.5);
         }
 
         /* Footer */
@@ -272,8 +302,18 @@
                 font-size: 0.8rem;
             }
 
-            nav .brand {
-                font-size: 0.95rem;
+            nav .brand img {
+                height: 34px;
+                width: 34px;
+            }
+
+            nav .brand-text {
+                font-size: 0.85rem;
+            }
+
+            .hero .logo {
+                width: 140px;
+                height: 140px;
             }
         }
 
@@ -298,7 +338,7 @@
 <body>
     <nav>
         <div class="nav-inner">
-            <div class="brand"><span>AITC</span></div>
+            <div class="brand"><img src="Logo_Dark.png" alt="AITC logo"><span class="brand-text">Atlantic IT Consulting</span></div>
             <ul>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
@@ -309,6 +349,7 @@
 
     <section class="hero">
         <div class="container">
+            <img src="Logo_Dark.png" alt="Atlantic Information Technology Consulting logo" class="logo">
             <h1>Atlantic Information Technology Consulting</h1>
             <p class="tagline">Calm, peer-level cybersecurity guidance for small-to-mid-sized businesses.</p>
             <p class="location">East Islip, New York</p>
@@ -351,12 +392,12 @@
             </div>
             <div class="about-content">
                 <p>Atlantic Information Technology Consulting was founded in 2017 by Benjamin Sondgeroth to bring enterprise-grade security experience to small and mid-sized businesses &mdash; the organizations that need it most but are least likely to have it in-house.</p>
-                <p>Ben's background spans offensive security, risk management, and security leadership at scale:</p>
+                <p>Ben's background spans offensive and defensive security, risk management, architecture, and security leadership at scale:</p>
                 <ul class="credentials">
-                    <li>Led a 28-person Security Architecture team at Morgan Stanley</li>
-                    <li>Built and ran a global red team at CA Technologies; penetration tested 500+ systems</li>
+                    <li>Led 28 person global Security Architecture teams</li>
+                    <li>Built and ran a global red team; penetration tested 1000s of systems</li>
                     <li>Led tabletop exercises for 50+ senior leaders; contributed to $100M+ in revenue protection</li>
-                    <li>Conference speaker at West Point, Gridiron, SANS, and Accelerate</li>
+                    <li>Conference speaker and educator</li>
                     <li>Multiple first-place finishes in capture-the-flag competitions</li>
                 </ul>
             </div>
@@ -369,7 +410,10 @@
                 <h2>Get in Touch</h2>
                 <p>Reach out to start a conversation about your security needs.</p>
             </div>
-            <a href="https://www.instagram.com/atlanticit.inc" class="instagram-link" target="_blank" rel="noopener noreferrer">@atlanticit.inc on Instagram</a>
+            <div class="contact-buttons">
+                <a href="mailto:ben@atlanticit.org" class="email-link">ben@atlanticit.org</a>
+                <a href="https://www.instagram.com/atlanticit.inc" target="_blank" rel="noopener noreferrer">@atlanticit.inc</a>
+            </div>
         </div>
     </section>
 
