@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlantic Information Technology Consulting, Inc.</title>
-    <meta name="description" content="Calm, peer-level cybersecurity guidance for small-to-mid-sized businesses. Threat modeling, penetration testing, security awareness training, and incident response planning.">
+    <title>Cybersecurity Consulting for Small Business | Atlantic IT Consulting</title>
+    <meta name="description" content="Cybersecurity consulting for small and mid-sized businesses on Long Island, NY. Threat modeling, penetration testing, security awareness training, and incident response planning from Atlantic IT Consulting.">
+    <link rel="canonical" href="https://atlanticit.org/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cybersecurity Consulting for Small Business | Atlantic IT Consulting">
+    <meta property="og:description" content="Calm, peer-level cybersecurity guidance for small-to-mid-sized businesses. Threat modeling, penetration testing, security awareness training, and incident response planning.">
+    <meta property="og:url" content="https://atlanticit.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://atlanticit.org/Logo_Dark.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cybersecurity Consulting for Small Business | Atlantic IT Consulting">
+    <meta name="twitter:description" content="Calm, peer-level cybersecurity guidance for small-to-mid-sized businesses. Threat modeling, penetration testing, security awareness training, and incident response planning.">
+    <meta name="twitter:image" content="https://atlanticit.org/Logo_Dark.png">
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -263,6 +275,33 @@
             border-color: rgba(91, 155, 213, 0.5);
         }
 
+        /* FAQ */
+        .faq .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(91, 155, 213, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #8a9bb8;
+            line-height: 1.65;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -417,10 +456,158 @@
         </div>
     </section>
 
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What size businesses do you work with?</h3>
+                    <p>Atlantic IT Consulting primarily works with small and mid-sized businesses &mdash; typically organizations with 10 to 500 employees that need enterprise-grade security expertise but don't have a full security team in-house.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What does a penetration test include?</h3>
+                    <p>A penetration test includes simulated attacks against your internet-facing systems and web applications to find vulnerabilities before real attackers do. You receive a detailed report with clear findings and actionable remediation steps, prioritized by risk.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where is Atlantic IT Consulting located?</h3>
+                    <p>Atlantic IT Consulting is based on Long Island, New York. We work with businesses locally and remotely across the United States.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I get started?</h3>
+                    <p>Reach out via email at <a href="mailto:ben@atlanticit.org">ben@atlanticit.org</a> to start a conversation about your security needs. We'll discuss your current situation, identify priorities, and scope an engagement that fits your budget and timeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             &copy; 2017&ndash;2026 Atlantic Information Technology Consulting, Inc. All rights reserved.
         </div>
     </footer>
+
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Atlantic Information Technology Consulting, Inc.",
+            "alternateName": "Atlantic IT Consulting",
+            "url": "https://atlanticit.org",
+            "logo": "https://atlanticit.org/Logo_Dark.png",
+            "image": "https://atlanticit.org/Logo_Dark.png",
+            "description": "Cybersecurity consulting for small and mid-sized businesses. Threat modeling, penetration testing, security awareness training, and incident response planning.",
+            "foundingDate": "2017",
+            "founder": {
+                "@type": "Person",
+                "name": "Benjamin Sondgeroth",
+                "jobTitle": "Founder",
+                "knowsAbout": ["Cybersecurity", "Penetration Testing", "Threat Modeling", "Security Architecture", "Incident Response", "Red Teaming"]
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Long Island",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+            },
+            "areaServed": [
+                {
+                    "@type": "Place",
+                    "name": "Long Island, New York"
+                },
+                {
+                    "@type": "Country",
+                    "name": "United States"
+                }
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "ben@atlanticit.org",
+                "contactType": "customer service"
+            },
+            "sameAs": [
+                "https://www.instagram.com/atlanticit.inc"
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Cybersecurity Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Threat Modeling",
+                            "description": "A structured process for identifying the most likely attack scenarios your business faces. You receive prioritized risk areas and recommended mitigations you can actually act on."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Penetration Testing",
+                            "description": "Simulated attacks against your internet-facing systems and web applications to find vulnerabilities before real attackers do. Clear findings, clear remediation steps."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Security Awareness Training",
+                            "description": "Short, frequent modules with role-specific scenarios and simulated phishing. Designed to be educational, not punitive — your team learns without the scare tactics."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Incident Response Planning",
+                            "description": "Tailored runbooks, tabletop exercises, and escalation plans so your organization knows exactly what to do when — not if — an incident occurs."
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What size businesses do you work with?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Atlantic IT Consulting primarily works with small and mid-sized businesses — typically organizations with 10 to 500 employees that need enterprise-grade security expertise but don't have a full security team in-house."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What does a penetration test include?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A penetration test includes simulated attacks against your internet-facing systems and web applications to find vulnerabilities before real attackers do. You receive a detailed report with clear findings and actionable remediation steps, prioritized by risk."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Where is Atlantic IT Consulting located?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Atlantic IT Consulting is based on Long Island, New York. We work with businesses locally and remotely across the United States."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I get started?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Reach out via email at ben@atlanticit.org to start a conversation about your security needs. We'll discuss your current situation, identify priorities, and scope an engagement that fits your budget and timeline."
+                    }
+                }
+            ]
+        }
+    ]
+    </script>
 </body>
 </html>
