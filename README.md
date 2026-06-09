@@ -4,7 +4,9 @@ One-page website for AITC, hosted on GitHub Pages at [atlanticit.org](https://at
 
 ## Structure
 
-- `index.html` — Single-page site with inline CSS (no frameworks, no JS)
+- `index.html` — Main website page
+- `assets/styles.css` — Shared site styles
+- `blog/index.html` — Blog listing page
 - `Logo_Dark.png` — Company logo
 - `CNAME` — Custom domain config for GitHub Pages
 
